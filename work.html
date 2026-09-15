@@ -1,20 +1,123 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cervera Real Estate — Heather Davies</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Cervera Real Estate case study by Heather Davies — digital experiences, social campaigns, editorial design, and real estate marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f6f3ed;color:#1b2736;font-family:'DM Mono',monospace;font-size:13px;line-height:1.55}a{color:inherit}.wrap{width:min(1180px,92%);margin:auto}header{height:78px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:21px;color:#ff5a13;text-decoration:none}nav{display:flex;gap:30px}nav a{text-decoration:none}.active{color:#ff5a13;background:#fff0e8;padding:8px 12px}.social{color:#ff5a13}.hero{height:420px;background-image:linear-gradient(90deg,rgba(10,20,30,.28),rgba(10,20,30,.03)),url('images/photography/rider-work.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat;display:flex;align-items:center;padding:0 12%;color:white;position:relative;overflow:hidden}.hero:after{content:'THE RIDER DISTRICT';position:absolute;left:10%;top:55px;font-family:serif;font-size:54px;letter-spacing:.04em;text-shadow:0 2px 18px #0008}.hero-copy{margin-top:85px;max-width:350px;text-shadow:0 2px 12px #0009;position:relative;z-index:2}.hero-copy b{letter-spacing:.16em}.hero-copy em{display:block;font-family:serif;font-size:17px;margin-top:10px}.explore-btn{display:inline-block;margin-top:22px;padding:11px 20px;background:rgba(246,243,237,.94);color:#1b2736;text-decoration:none;text-shadow:none;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:transform .2s ease,background .2s ease}.explore-btn:hover{transform:translateY(-2px);background:#fff}.intro{display:grid;grid-template-columns:1fr 280px;gap:55px;padding:35px 0;border-bottom:1px solid #ddd8ce;scroll-margin-top:20px}.intro h1{font-weight:400;font-size:40px;margin:8px 0}.intro p{max-width:760px}.meta{border-left:1px solid #ccc;padding-left:30px;display:grid;grid-template-columns:90px 1fr;gap:10px;font-size:11px}.meta b{font-weight:400;color:#68717b}.section{padding:40px 0;border-bottom:1px solid #ddd8ce}.section h2{font-weight:400;font-size:28px;margin:0 0 6px}.section>p{max-width:760px;margin-top:0}.digital-heading{display:flex;align-items:flex-start;justify-content:space-between}.section-number{font-size:10px;margin-top:9px}.digital-copy{max-width:690px!important;margin-bottom:18px!important}.digital-visual{width:94%;margin:10px auto 0;position:relative}.ux-image{display:block;width:100%;height:auto;object-fit:contain}.tiles{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-top:25px}.tile{height:300px;background:linear-gradient(145deg,#f1a65e,#f8eee1);display:grid;place-items:center;text-align:center;padding:20px}.tile:first-child{background:#e78b48;color:white;font-size:22px;letter-spacing:.15em}.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:25px}.social-card{height:300px;background:linear-gradient(145deg,#075fbd,#77c9f4);color:white;display:grid;place-items:center;padding:25px;text-align:center;font-size:18px}.social-card:nth-child(2){background:#19466e}.social-card:nth-child(3){background:#a9b5bb;color:#152334}.social-card:nth-child(4){background:#087d79}.pager{display:flex;justify-content:space-between;padding:45px 0}footer{border-top:1px solid #ddd8ce;padding:45px 0;display:flex;justify-content:space-between;align-items:end}.quote{font-family:'Bradley Hand','Segoe Print','Comic Sans MS',cursive;font-size:20px;font-style:normal;letter-spacing:.06em;color:#737b82;transform:rotate(-5deg);position:relative;padding-bottom:13px}.quote:after{content:'';position:absolute;left:10%;bottom:0;width:90%;border-top:2px solid #737b82;transform:rotate(-7deg);transform-origin:left}.orange{color:#ff5a13}@media(max-width:760px){nav{gap:12px;font-size:10px}.hero{height:330px;background-size:cover;background-position:center}.hero:after{font-size:38px}.intro{grid-template-columns:1fr}.meta{border-left:0;padding-left:0}.digital-visual{width:100%}.tiles,.social-grid{grid-template-columns:1fr 1fr}.tile,.social-card{height:220px}.quote{display:none}}
+:root{--paper:#f6f3ed;--ink:#172333;--orange:#ff5a13;--line:#d9d4ca;--blue:#144b79;--muted:#69717a;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Mono',monospace;font-size:13px;line-height:1.55}img{display:block;max-width:100%}a{color:inherit}.wrap{width:min(var(--max),92%);margin:auto}
+header{height:78px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:20px;color:var(--orange);text-decoration:none}nav{display:flex;gap:28px;align-items:center}nav a{text-decoration:none}.active{color:var(--orange);background:#fff0e8;padding:7px 11px}.social{color:var(--orange)}
+.project-hero{position:relative;min-height:74vh;display:grid;grid-template-columns:1.05fr .95fr;overflow:hidden;background:#0e385a;color:#fff}.hero-copy{padding:9vw 6vw 7vw max(6vw,calc((100vw - var(--max))/2));align-self:end}.kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase}.hero-copy h1{font:300 clamp(48px,7vw,105px)/.9 'Manrope',sans-serif;letter-spacing:-.055em;margin:24px 0 28px}.hero-copy p{max-width:510px;font-size:14px;color:#e9eef3}.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.hero-tags span{border:1px solid #ffffff66;padding:7px 10px}.hero-media{position:relative;min-height:74vh;background:#e9edf0;overflow:hidden}.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center}.hero-index{position:absolute;right:24px;top:22px;color:#fff;font-size:11px;z-index:2}.scroll-note{position:absolute;right:26px;bottom:24px;color:#fff;font-size:10px;letter-spacing:.14em;writing-mode:vertical-rl}
+.intro{padding:74px 0 70px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1.6fr .7fr;gap:80px}.intro h2{font:300 clamp(35px,4.4vw,64px)/1.02 'Manrope',sans-serif;letter-spacing:-.04em;margin:10px 0 24px}.intro .summary{font-size:15px;max-width:760px}.meta{border-left:1px solid var(--line);padding-left:28px;display:grid;grid-template-columns:92px 1fr;gap:12px;font-size:11px}.meta b{font-weight:400;color:var(--muted)}
+.case-section{padding:72px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:1fr auto;align-items:start;margin-bottom:34px}.section-head h2{font:300 clamp(32px,4vw,56px)/1 'Manrope',sans-serif;letter-spacing:-.04em;margin:0}.section-number{font-size:10px;color:var(--muted)}.section-deck{max-width:720px;margin:12px 0 0;font-size:14px}.caption{font-size:10px;color:var(--muted);margin-top:10px}
+.feature-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:18px;align-items:stretch}.feature-grid .large{background:#e6e2db;min-height:540px;display:flex;align-items:center;justify-content:center;overflow:hidden}.feature-grid .large img{width:100%;height:100%;object-fit:cover}.feature-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}.feature-stack figure{margin:0;background:#ece9e2;overflow:hidden}.feature-stack img{width:100%;height:100%;object-fit:cover}
+.social-wrap{position:relative}.social-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:10px}.social-carousel::-webkit-scrollbar{display:none}.social-card{flex:0 0 min(360px,78vw);scroll-snap-align:start;background:#fff}.social-card img{width:100%;aspect-ratio:4/5;object-fit:cover}.carousel-controls{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.carousel-controls button{width:40px;height:40px;border:1px solid var(--ink);background:transparent;border-radius:50%;font:inherit;cursor:pointer}.carousel-controls button:hover{background:var(--ink);color:var(--paper)}
+.editorial-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:22px;align-items:start}.editorial-feature{background:white;padding:14px}.editorial-feature img{width:100%;height:auto}.editorial-stack{display:grid;grid-template-columns:1fr 1fr;gap:18px}.editorial-stack figure{margin:0;background:#fff;padding:10px}.editorial-stack .wide{grid-column:1/-1}.editorial-stack img{width:100%;height:auto}
+.full-bleed{padding:0;border-bottom:1px solid var(--line);background:#fff}.full-bleed img{width:100%;max-height:86vh;object-fit:contain;background:#fff}.full-caption{width:min(var(--max),92%);margin:auto;padding:16px 0 56px;display:flex;justify-content:space-between;color:var(--muted);font-size:10px}
+.statement{padding:100px 0 92px;display:grid;grid-template-columns:1fr 1fr;gap:60px}.statement h2{font:300 clamp(42px,5vw,75px)/.98 'Manrope',sans-serif;letter-spacing:-.05em;margin:0}.statement-copy{max-width:560px;font-size:15px;align-self:end}.orange-link{display:inline-block;color:var(--orange);margin-top:24px;text-decoration:none;border-bottom:1px solid currentColor}.pager{display:flex;justify-content:space-between;padding:34px 0 46px;border-top:1px solid var(--line)}footer{border-top:1px solid var(--line);padding:42px 0 50px;display:flex;justify-content:space-between;align-items:end}.quote{font-family:'Manrope',sans-serif;font-size:22px;font-style:italic;color:#777;transform:rotate(-4deg)}
+@media(max-width:850px){body{font-size:12px}header{height:auto;padding:22px 0;gap:18px;align-items:flex-start}header nav{gap:12px;flex-wrap:wrap;justify-content:flex-end}.social{display:none}.project-hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:80px 6vw 55px}.hero-media{min-height:62vh}.intro,.statement{grid-template-columns:1fr;gap:38px}.meta{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.feature-grid,.editorial-grid{grid-template-columns:1fr}.feature-grid .large{min-height:350px}.feature-stack{grid-template-columns:1fr 1fr;grid-template-rows:auto}.feature-stack img{aspect-ratio:1/1;object-fit:cover}.editorial-stack{grid-template-columns:1fr}.editorial-stack .wide{grid-column:auto}.quote{display:none}}
 </style>
-</head><body>
+</head>
+<body>
 <div class="wrap"><header><a class="logo" href="index.html">Heather Davies</a><nav><a class="active" href="work.html">Work</a><a href="index.html#places">Places</a><a href="index.html#about">About</a><a href="index.html#resume">Resumé</a><span class="social">in　✉　♥</span></nav></header></div>
-<div class="wrap"><section class="hero"><div class="hero-copy"><b>MIAMI RIVER LIVING REIMAGINED</b><em>Where City, Water, and Possibility Meet.</em><a class="explore-btn" href="#project-details">EXPLORE →</a></div></section>
-<section class="intro" id="project-details"><div><small>✦　01 / 06</small><h1>Cervera Real Estate</h1><p>BRAND　/　DIGITAL　/　MARKETING　/　EDITORIAL</p><p>During my graphic design internship at Cervera Real Estate in Miami, I created marketing materials across digital and print, including property landing pages, market studies, social media campaigns, and event communications. I worked closely with marketing and sales teams to translate complex information into clear, visually compelling design that reflects the brand’s luxury real estate identity.</p></div><div class="meta"><b>ROLE</b><span>Graphic Design Intern</span><b>COMPANY</b><span>Cervera Real Estate</span><b>LOCATION</b><span>Miami, FL</span><b>TIMELINE</b><span>Summer 2024</span><b>TOOLS</b><span>Figma, Adobe Creative Cloud, Canva, Excel</span></div></section>
-<section class="section digital-section"><div class="digital-heading"><h2>Digital Experiences</h2><span class="section-number">01</span></div><p class="digital-copy">I designed landing pages for featured properties, focusing on clean layouts, strong visuals, and clear messaging. These pages highlighted key features, amenities, and location benefits, helping to drive interest and engagement.</p><div class="digital-visual"><img class="ux-image" src="images/photography/rider-UX.png" alt="Rider District digital experience design"></div></section>
-<section class="section"><h2>Market Intelligence</h2><p>I designed a 19-page market report analyzing Miami-Dade real estate trends. I organized complex data into clear charts, tables, and graphics, creating a consistent visual system across neighborhoods.</p><div class="tiles"><div class="tile">MIAMI-DADE<br>COUNTY<br><small>MARKET TRENDS</small></div><div class="tile">Brickell<br>Condo Sales Q1 2024<br><br>CHARTS + TABLES</div><div class="tile">Downtown<br>Condo Sales Q1 2024<br><br>CHARTS + TABLES</div><div class="tile">East Edgewater<br>Condo Sales Q1 2024<br><br>CHARTS + TABLES</div></div><p><a class="orange" href="#">→ View Full Market Study (19 pages)</a></p></section>
-<section class="section"><h2>Campaigns &amp; Social</h2><p>I created social media ads for multiple realtors and real estate agents, developing custom graphics and messaging for each personal brand. I also designed event materials, including the July events e-flyer, to promote seminars, property tours, and community events.</p><div class="social-grid"><div class="social-card">Discover the Best of<br><b>MIAMI</b></div><div class="social-card">just because<br>the lender gives you<br>the green light…</div><div class="social-card">Realtor social<br>story campaign</div><div class="social-card">Boat Day<br>on the Bay</div></div></section>
-<div class="pager"><a href="index.html">← Back to Work</a><span>Next Project →</span></div>
-<footer><div><span class="orange">Heather Davies</span><br>© 2026</div><div class="quote">“A more curious life.”</div><nav><a href="work.html">Work</a><a href="index.html#places">Places</a><a href="index.html#about">About</a><a href="index.html#resume">Resumé</a></nav></footer></div>
-</body></html>
+
+<main>
+<section class="project-hero">
+  <div class="hero-copy">
+    <div class="kicker">Cervera Real Estate / Miami</div>
+    <h1>Design for<br>real life.</h1>
+    <p>Brand, digital, social, and editorial work created during my graphic design internship at Cervera Real Estate.</p>
+    <div class="hero-tags"><span>Digital</span><span>Marketing</span><span>Editorial</span><span>Social</span></div>
+  </div>
+  <div class="hero-media">
+    <div class="hero-index">01 / 04</div>
+    <img src="images/photography/cervera10.png" alt="Cervera Real Estate campaign design">
+    <div class="scroll-note">SCROLL TO EXPLORE ↓</div>
+  </div>
+</section>
+
+<div class="wrap">
+<section class="intro">
+  <div>
+    <div class="kicker">Project overview</div>
+    <h2>Cervera Real Estate</h2>
+    <p class="summary">During my graphic design internship at Cervera Real Estate in Miami, I created marketing materials across digital and print, including property landing pages, social media campaigns, event communications, and editorial content. I worked across different formats while keeping the work visually cohesive and easy to navigate.</p>
+  </div>
+  <div class="meta">
+    <b>ROLE</b><span>Graphic Design Intern</span>
+    <b>COMPANY</b><span>Cervera Real Estate</span>
+    <b>LOCATION</b><span>Miami, FL</span>
+    <b>TIMELINE</b><span>Summer 2024</span>
+    <b>TOOLS</b><span>Figma, Adobe Creative Cloud, Canva</span>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="section-head"><div><div class="kicker">Digital experiences</div><h2>Property storytelling,<br>built for the screen.</h2><p class="section-deck">I designed landing-page experiences for real estate projects with an emphasis on hierarchy, visual pacing, property imagery, and clear calls to action.</p></div><span class="section-number">01</span></div>
+  <div class="feature-grid">
+    <div class="large"><img src="images/photography/rider-UX.png" alt="Rider District digital landing page design"></div>
+    <div class="feature-stack">
+      <figure><img src="images/photography/rider-work.jpeg" alt="Rider District property campaign"></figure>
+      <figure><img src="images/photography/cervera16.png" alt="Cervera digital design detail"></figure>
+    </div>
+  </div>
+  <div class="caption">THE RIDER DISTRICT — WEB / CAMPAIGN / PROPERTY MARKETING</div>
+</section>
+
+<section class="case-section">
+  <div class="section-head"><div><div class="kicker">Campaigns & social</div><h2>Content with a point of view.</h2><p class="section-deck">Social media systems were adapted to different agents, audiences, and campaign goals while maintaining a polished real-estate voice.</p></div><span class="section-number">02</span></div>
+  <div class="social-wrap">
+    <div class="social-carousel" id="social-carousel">
+      <figure class="social-card"><img src="images/photography/cervera1.png" alt="Cervera social media campaign 1"></figure>
+      <figure class="social-card"><img src="images/photography/cervera2.png" alt="Cervera social media campaign 2"></figure>
+      <figure class="social-card"><img src="images/photography/cervera3.png" alt="Cervera social media campaign 3"></figure>
+      <figure class="social-card"><img src="images/photography/cervera4.png" alt="Cervera social media campaign 4"></figure>
+      <figure class="social-card"><img src="images/photography/cervera5.png" alt="Cervera social media campaign 5"></figure>
+      <figure class="social-card"><img src="images/photography/cervera6.png" alt="Cervera social media campaign 6"></figure>
+      <figure class="social-card"><img src="images/photography/cervera7.png" alt="Cervera social media campaign 7"></figure>
+      <figure class="social-card"><img src="images/photography/cervera8.png" alt="Cervera social media campaign 8"></figure>
+    </div>
+    <div class="carousel-controls"><button type="button" id="social-prev" aria-label="Previous social design">←</button><button type="button" id="social-next" aria-label="Next social design">→</button></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="section-head"><div><div class="kicker">Editorial & events</div><h2>Miami, translated<br>into a campaign.</h2><p class="section-deck">I designed event-focused editorial pieces that brought together destination imagery, local recommendations, and Cervera’s established visual identity.</p></div><span class="section-number">03</span></div>
+  <div class="editorial-grid">
+    <div class="editorial-feature"><img src="images/photography/cervera13.png" alt="Cervera Miami July and August campaign cover"></div>
+    <div class="editorial-stack">
+      <figure><img src="images/photography/cervera14.png" alt="Taste of Gables editorial page"></figure>
+      <figure><img src="images/photography/cervera15.png" alt="Miami Spa Month editorial page"></figure>
+      <figure class="wide"><img src="images/photography/cervera10.png" alt="Cervera social marketing campaign"></figure>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="full-bleed">
+  <img src="images/photography/cervera16.png" alt="Cervera Real Estate long-form digital project">
+  <div class="full-caption"><span>LONG-FORM DIGITAL EXPERIENCE</span><span>04 / 04</span></div>
+</section>
+
+<div class="wrap">
+<section class="statement">
+  <h2>Different formats.<br>One visual voice.</h2>
+  <div class="statement-copy"><p>The project taught me how to move between web, social, editorial, and marketing deliverables without losing the larger identity of the brand. The work had to be useful first — but it also had to feel considered.</p><a class="orange-link" href="index.html">→ Back to selected work</a></div>
+</section>
+<div class="pager"><a href="index.html">← Back to work</a><span>Next Project →</span></div>
+<footer><div><span style="color:var(--orange)">Heather Davies</span><br><small>© 2026</small></div><div class="quote">“A more curious life.”</div><nav><a href="work.html">Work</a><a href="index.html#places">Places</a><a href="index.html#about">About</a><a href="index.html#resume">Resumé</a></nav></footer>
+</div>
+</main>
+<script>
+const carousel=document.getElementById('social-carousel');
+const amount=376;
+document.getElementById('social-next').addEventListener('click',()=>carousel.scrollBy({left:amount,behavior:'smooth'}));
+document.getElementById('social-prev').addEventListener('click',()=>carousel.scrollBy({left:-amount,behavior:'smooth'}));
+</script>
+</body>
+</html>
