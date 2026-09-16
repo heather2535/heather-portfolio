@@ -134,6 +134,28 @@
   flex: 1;
 }
 
+/* Uniform font size for definition list */
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 24px;
+}
+
+dt {
+  font-size: 16px;
+  font-weight: 600;
+  color: #172f55;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+dd {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111a27;
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   .als-feature-image-link img,
   .als-case-header-inner > img {
@@ -189,5 +211,15 @@
   .als-two-col {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+    gap: 8px 0;
+  }
+
+  dt,
+  dd {
+    font-size: 14px;
   }
 }
