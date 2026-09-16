@@ -97,7 +97,7 @@
   text-underline-offset: 8px;
 }
 
-.als-overview .overview-title {
+.overview-title {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 38px;
   font-weight: 400;
@@ -108,7 +108,7 @@
   position: relative;
 }
 
-.als-overview .overview-title::after {
+.overview-title::after {
   content: "";
   position: absolute;
   left: 0;
@@ -182,7 +182,7 @@
     font-size: 11px;
   }
 
-  .als-overview .overview-title {
+  .overview-title {
     font-size: 34px;
   }
 
