@@ -1,0 +1,19 @@
+/* Shared blue-and-white portfolio palette. */
+:root{--paper:#ffffff;--ink:#14233b;--orange:#14233b;--line:#d9e2ed;--muted:#61738b;--als-paper:#edf4ff;--als-navy:#17345e;--als-blue:#7ea5cf}
+body{background:#fff;color:#14233b}
+header,.site-header{background:#fff}
+header .logo,.site-header .logo{color:#14233b;letter-spacing:.15em;text-transform:uppercase}
+header nav .active,.site-header nav .active{color:#14233b;background:#edf4ff}
+header nav a:hover,.site-header nav a:hover{color:#356998}
+.nav-social,.social,footer .logo,footer b,.orange{color:#14233b}
+a:focus-visible{outline-color:#356998}
+.photo,.portrait{background:#edf4ff;color:#61738b}
+.about,footer,.project-details{border-color:#d9e2ed}
+.hero-locations,.quote,.margin-note,.handwritten,.work-intro p{color:#61738b}
+.project-portals .project-empty{color:#61738b;border-color:#a8bfdc}
+.property-copy a{background:#edf4ff;color:#14233b}
+.device-mockup{background:#f3f7fc}
+.growth-spreads{background:#14233b;color:#fff}
+.growth-spreads figcaption{color:#c4d4e9}
+@media(max-width:800px){header .logo,.site-header .logo{font-size:18px;letter-spacing:.1em}}
+@media(max-width:460px){header,.site-header{height:auto;min-height:78px;flex-wrap:wrap;gap:14px;padding-top:16px;padding-bottom:16px}header nav,.site-header nav{flex-wrap:wrap}}
