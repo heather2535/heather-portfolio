@@ -1,0 +1,10 @@
+/* Fixed-width cards keep additional photos in the same horizontal strip. */
+.places-scroll-hint{font-size:13px;color:#586775;margin:0 0 18px;line-height:1.5}
+.photo-row.places-scroll{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:clamp(240px,28vw,340px);gap:18px;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:2px;overscroll-behavior-x:contain;padding:3px 3px 20px;scrollbar-width:thin;scrollbar-color:var(--orange) transparent;-webkit-overflow-scrolling:touch}
+.places-scroll figure{min-width:0;scroll-snap-align:start}
+.places-scroll figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.places-scroll figcaption{font-size:14px;line-height:1.5;padding-top:10px}
+.places-scroll:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+.places-scroll::-webkit-scrollbar{height:7px}
+.places-scroll::-webkit-scrollbar-thumb{background:var(--orange);border-radius:8px}
+@media(max-width:600px){.photo-row.places-scroll{grid-auto-columns:78vw;gap:14px}}
