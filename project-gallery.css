@@ -19,3 +19,5 @@
 @media(prefers-reduced-motion:reduce){.project-portals .portal{transition:none}}
 
 .project-talentora{background-image:url('https://raw.githubusercontent.com/heather2535/urban-lamp2/ca02a4e927d1d3a9dab0019a3323040461a05b7c/public/image16.png');background-position:center;background-color:#14233b}.project-portals .project-talentora:after{background:linear-gradient(180deg,#14233be8 0%,#14233b99 45%,#14233b22 75%,#14233baa 100%)}
+
+.project-chaos{background-image:url("images/chaos-order/book-overview.webp");background-position:25% center;background-color:#153be8}.project-portals .project-chaos:after{background:linear-gradient(180deg,#14233be8 0%,#14233b99 45%,#14233b22 75%,#14233baa 100%)}
