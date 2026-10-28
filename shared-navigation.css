@@ -8,3 +8,5 @@ header.home-header{position:fixed;top:0;left:50%;transform:translateX(-50%);z-in
 .contact-panel{width:min(380px,88vw);padding:20px;border-radius:18px}.contact-panel-head{font-size:13px;margin-bottom:18px}.contact-entry{margin-top:20px}.contact-entry>span{font-size:12px;margin-bottom:7px}.contact-entry a{font-size:16px}.contact-panel button{font-size:21px}.copy-status{font-size:12px;margin-top:10px}
 
 @media(min-width:601px){.contact-panel{right:calc(max(6vw,(100vw - 1400px)/2) + 150px)}}
+
+.contact-entry{padding:12px 10px;margin-left:-10px;margin-right:-10px;border-radius:12px;transition:background-color .15s ease}.contact-entry:hover,.contact-entry:focus-within{background:#f3f3f5}@media(prefers-reduced-motion:reduce){.contact-entry{transition:none}}
