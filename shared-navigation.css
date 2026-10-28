@@ -14,3 +14,5 @@ header.home-header{position:fixed;top:0;left:50%;transform:translateX(-50%);z-in
 .contact-entry{margin-top:6px;padding-top:9px;padding-bottom:9px}.contact-entry>span{margin-bottom:5px}.contact-panel-head{margin-bottom:10px}
 
 .contact-panel{top:80px}@media(max-width:600px){.contact-panel{top:68px}}
+
+.contact-toggle{display:inline-flex;align-items:center;gap:9px;padding:0}.contact-toggle svg{flex-shrink:0}@media(max-width:600px){.contact-toggle{gap:5px}.contact-toggle svg{width:18px;height:18px}}
