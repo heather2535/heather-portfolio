@@ -7,4 +7,4 @@ header.home-header{position:fixed;top:0;left:50%;transform:translateX(-50%);z-in
 
 .contact-panel{width:min(380px,88vw);padding:20px;border-radius:18px}.contact-panel-head{font-size:13px;margin-bottom:18px}.contact-entry{margin-top:20px}.contact-entry>span{font-size:12px;margin-bottom:7px}.contact-entry a{font-size:16px}.contact-panel button{font-size:21px}.copy-status{font-size:12px;margin-top:10px}
 
-@media(min-width:601px){.contact-panel{right:calc(max(6vw,(100vw - 1400px)/2) + 100px)}}
+@media(min-width:601px){.contact-panel{right:calc(max(6vw,(100vw - 1400px)/2) + 200px)}}
