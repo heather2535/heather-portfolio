@@ -10,3 +10,5 @@ header.home-header{position:fixed;top:0;left:50%;transform:translateX(-50%);z-in
 @media(min-width:601px){.contact-panel{right:calc(max(6vw,(100vw - 1400px)/2) + 150px)}}
 
 .contact-entry{padding:12px 10px;margin-left:-10px;margin-right:-10px;border-radius:12px;transition:background-color .15s ease}.contact-entry:hover,.contact-entry:focus-within{background:#f3f3f5}@media(prefers-reduced-motion:reduce){.contact-entry{transition:none}}
+
+.contact-entry{margin-top:6px;padding-top:9px;padding-bottom:9px}.contact-entry>span{margin-bottom:5px}.contact-panel-head{margin-bottom:10px}
