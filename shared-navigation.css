@@ -16,3 +16,6 @@ header.home-header{position:fixed;top:0;left:50%;transform:translateX(-50%);z-in
 .contact-panel{top:80px}@media(max-width:600px){.contact-panel{top:68px}}
 
 .contact-toggle{display:inline-flex;align-items:center;gap:9px;padding:0}.contact-toggle svg{flex-shrink:0}@media(max-width:600px){.contact-toggle{gap:5px}.contact-toggle svg{width:18px;height:18px}}
+
+/* Mobile: show contact icon without visible label */
+@media(max-width:760px){header.home-header .contact-toggle{font-size:0!important;gap:0!important;margin-right:0!important;min-width:36px;min-height:40px;display:inline-flex!important;align-items:center;justify-content:center}header.home-header .contact-toggle svg{width:22px!important;height:22px!important}}
