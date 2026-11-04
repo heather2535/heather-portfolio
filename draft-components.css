@@ -13,3 +13,9 @@
 @media(min-width:651px){#components .draft-component-stage{height:var(--component-height,500px);aspect-ratio:auto;justify-content:flex-start}#components .draft-ipad-frame{width:var(--component-device-width,450px);max-width:none}}
 
 @media(min-width:801px){#components .draft-component-card{flex-basis:54%}#components .draft-component-stage{height:clamp(340px,48vh,440px)!important}#components .draft-ipad-frame{width:min(100%,390px)!important}#components .draft-components-controls{margin:14px 0 20px}}
+
+/* Full-bleed component screenshots without tablet framing. */
+#components .draft-component-stage{padding:0!important;background:transparent!important;justify-content:center!important}
+#components .draft-ipad-frame{width:100%!important;height:100%!important;max-width:none!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;overflow:hidden}
+#components .draft-ipad-frame:before{display:none!important}
+#components .draft-ipad-frame img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center top;border-radius:0!important}
