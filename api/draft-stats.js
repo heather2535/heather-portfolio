@@ -12,9 +12,9 @@ module.exports = async function handler(req, res) {
   const action=req.method==='POST'?body.action:'read';
   if (!['read','view','like','unlike'].includes(action)) return res.status(400).json({error:'Invalid action'});
   if(action==='view' && !/^[a-f0-9-]{36}$/.test(body.session||'')) return res.status(400).json({error:'Invalid session'});
-  const script=`if ARGV[1] == 'view' then if redis.call('SET', KEYS[3], '1', 'NX', 'EX', 86400) then redis.call('INCR',KEYS[1]) end elseif ARGV[1] == 'like' then redis.call('SADD',KEYS[2],ARGV[2]) elseif ARGV[1] == 'unlike' then redis.call('SREM',KEYS[2],ARGV[2]) end return {tonumber(redis.call('GET',KEYS[1]) or '0'),redis.call('SCARD',KEYS[2]),redis.call('SISMEMBER',KEYS[2],ARGV[2])}`;
+  const script=`if redis.call('EXISTS',KEYS[2]) == 0 then redis.call('SET',KEYS[2],redis.call('SCARD','portfolio:draft:likes')) end if ARGV[1] == 'view' then if redis.call('SET', KEYS[3], '1', 'NX', 'EX', 86400) then redis.call('INCR',KEYS[1]) end elseif ARGV[1] == 'like' then redis.call('INCR',KEYS[2]) elseif ARGV[1] == 'unlike' then if tonumber(redis.call('GET',KEYS[2]) or '0') > 0 then redis.call('DECR',KEYS[2]) end end return {tonumber(redis.call('GET',KEYS[1]) or '0'),tonumber(redis.call('GET',KEYS[2]) or '0'),0}`;
   try {
-    const response=await fetch(url,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(['EVAL',script,'3','portfolio:draft:views','portfolio:draft:likes',`portfolio:draft:session:${id}:${body.session||'read'}`,action,id]),signal:AbortSignal.timeout(5000)});
+    const response=await fetch(url,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(['EVAL',script,'3','portfolio:draft:views','portfolio:draft:like-clicks',`portfolio:draft:session:${id}:${body.session||'read'}`,action,id]),signal:AbortSignal.timeout(5000)});
     const data=await response.json();if(!response.ok||data.error||!Array.isArray(data.result)) throw new Error('Counter request failed');
     const [views,likes,liked]=data.result;return res.status(200).json({views,likes,liked:Boolean(liked)});
   } catch(error) {console.error('Draft counters unavailable');return res.status(503).json({error:'Counters temporarily unavailable'});}
