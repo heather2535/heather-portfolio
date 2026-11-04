@@ -9,3 +9,5 @@
 #components .draft-component-card figcaption{transition:opacity .4s}
 #components .draft-components-controls button:not(:disabled):hover{background:#222;color:#fff}
 @media(max-width:650px){#components .draft-component-stage{aspect-ratio:4/5}}
+
+@media(min-width:651px){#components .draft-component-stage{height:var(--component-height,500px);aspect-ratio:auto;justify-content:flex-start}#components .draft-ipad-frame{width:var(--component-device-width,450px);max-width:none}}
