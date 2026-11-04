@@ -52,15 +52,28 @@ async function updateElevation(){
   elevationNote.textContent='Loading actual terrain elevation…';
   try{
     const points=sampleRoute(route);
-    const latitude=points.map(p=>p[0].toFixed(5)).join(',');
-    const longitude=points.map(p=>p[1].toFixed(5)).join(',');
-    const response=await fetch('https://api.open-meteo.com/v1/elevation?latitude='+latitude+'&longitude='+longitude);
-    if(!response.ok)throw Error('Elevation service unavailable');
-    const data=await response.json();
-    if(!Array.isArray(data.elevation)||data.elevation.length!==points.length||data.elevation.some(v=>!Number.isFinite(v)))throw Error('Invalid elevation response');
+    const values=[];
+    // Smaller batches avoid URL length and per-request location limits.
+    for(let offset=0;offset<points.length;offset+=20){
+      const chunk=points.slice(offset,offset+20);
+      const latitude=chunk.map(p=>p[0].toFixed(5)).join(',');
+      const longitude=chunk.map(p=>p[1].toFixed(5)).join(',');
+      let batch=null;
+      for(let attempt=0;attempt<2;attempt++){
+        try{
+          const response=await fetch('https://api.open-meteo.com/v1/elevation?latitude='+encodeURIComponent(latitude)+'&longitude='+encodeURIComponent(longitude));
+          if(!response.ok)throw Error('Elevation HTTP '+response.status);
+          const data=await response.json();
+          if(!Array.isArray(data.elevation)||data.elevation.length!==chunk.length||data.elevation.some(v=>!Number.isFinite(v)))throw Error('Invalid elevation response');
+          batch=data.elevation;break;
+        }catch(error){if(attempt===1)throw error;await new Promise(resolve=>setTimeout(resolve,650))}
+      }
+      if(id!==elevationRequest)return;
+      values.push(...batch);
+    }
     if(id!==elevationRequest)return;
-    renderElevation(data.elevation,route);
-  }catch(e){if(id!==elevationRequest)return;elevationNote.textContent='Elevation data unavailable for this route. Try again later.'}
+    renderElevation(values,route);
+  }catch(e){if(id!==elevationRequest)return;console.warn('Elevation lookup failed:',e);elevationChart.innerHTML='';elevationDistances.innerHTML='';elevationNote.textContent='Elevation data temporarily unavailable.'}
 }
 function choose(i){active=i;render()}
 document.getElementById('fitMap').onclick=()=>{if(layers.length){const group=L.featureGroup(layers);map.fitBounds(group.getBounds(),{padding:[22,22]})}else map.fitBounds([start,end],{padding:[25,25]})};
