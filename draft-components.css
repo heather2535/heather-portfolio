@@ -19,3 +19,9 @@
 #components .draft-ipad-frame{width:100%!important;height:100%!important;max-width:none!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;overflow:hidden}
 #components .draft-ipad-frame:before{display:none!important}
 #components .draft-ipad-frame img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center top;border-radius:0!important}
+
+/* Transparent iPad-style glass bezel around each full-bleed screenshot. */
+#components .draft-ipad-frame{padding:10px!important;border:1px solid rgba(115,125,140,.48)!important;border-radius:26px!important;background:rgba(220,225,232,.18)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 8px 24px rgba(20,25,35,.08)!important;box-sizing:border-box!important}
+#components .draft-ipad-frame:before{display:block!important;top:3px!important;width:4px!important;height:4px!important;background:rgba(90,95,105,.5)!important}
+#components .draft-ipad-frame img{border-radius:17px!important}
+@media(max-width:650px){#components .draft-ipad-frame{padding:6px!important;border-radius:17px!important}#components .draft-ipad-frame img{border-radius:11px!important}}
