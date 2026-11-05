@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Route — Heather Davies Design</title><meta name="description" content="Route helps drivers compare travel time, distance, and estimated fuel cost before a trip."><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="blue-theme.css"><link rel="stylesheet" href="portfolio-upgrades.css"><link rel="stylesheet" href="shared-navigation.css"><link rel="icon" type="image/png" href="images/heather-davies-tab-icon.png"><script src="contact-panel.js" defer></script></head><body class="upgraded"><a class="skip-link" href="#main">Skip to content</a><header class="home-header"><nav aria-label="Main navigation"><a href="index.html"><span aria-hidden="true">H</span>Home</a><a href="index.html#selected-work" aria-current="page"><span aria-hidden="true">W</span>Work</a><a href="index.html#places"><span aria-hidden="true">P</span>Places</a><a href="about.html"><span aria-hidden="true">A</span>About</a></nav><a class="home-resume" href="heather-davies-resume.pdf">Resumé ↗</a></header>
+<style>
+.route-case{width:min(1200px,calc(100% - 48px));margin:clamp(96px,12vw,165px) auto 70px;display:grid;grid-template-columns:155px minmax(0,1fr);gap:36px}
+.route-case-nav{position:sticky;top:100px;align-self:start;display:grid;gap:16px;font-size:14px}
+.route-case-nav a{color:inherit;text-decoration:none}.route-case-nav a:hover{text-decoration:underline}
+.route-case h1{font-size:clamp(38px,5vw,60px);margin:0}.route-case .deck{color:#666;margin:10px 0 36px}.route-case p{line-height:1.7}
+.route-case section{scroll-margin-top:100px;margin-bottom:52px}
+.route-facts{display:flex;flex-wrap:wrap;gap:18px 44px;margin:28px 0 36px}.route-facts dt{color:#777;margin-bottom:8px}.route-facts dd{margin:0}
+.route-case img{display:block;width:100%;height:auto;border-radius:14px}.route-case figure{margin:0 0 52px}
+@media(max-width:720px){.route-case{display:block}.route-case-nav{position:static;display:flex;flex-wrap:wrap;margin-bottom:30px}}
+</style>
+<main id="main" class="route-case">
+  <nav class="route-case-nav" aria-label="Case study sections">
+    <a href="index.html#route-project">← Back</a>
+    <a href="#overview">Overview</a><a href="#challenge">Challenge</a>
+    <a href="#key-features">Key Features</a><a href="#prototype">Prototype</a>
+  </nav>
+  <article>
+    <section id="overview">
+      <h1>Route</h1>
+      <p class="deck">A clearer way to compare road trips.</p>
+      <p>Route brings travel time, distance, and estimated fuel cost into the same view. Drivers can compare alternatives, adjust their fuel assumptions, and save a trip to revisit later.</p>
+      <dl class="route-facts">
+        <div><dt>Role</dt><dd>Founder, Product Designer</dd></div>
+        <div><dt>Year</dt><dd>2026</dd></div>
+        <div><dt>Scope</dt><dd>Strategy, UI/UX Design, 0 to 1</dd></div>
+      </dl>
+    </section>
+    <figure><img src="images/route-three-screens.webp" alt="Route Options, trip planning, and Saved Trips screens"></figure>
+    <section id="challenge">
+      <h2>The challenge</h2>
+      <p>A faster route can cover more miles and cost more in fuel. I wanted drivers to see those trade-offs before committing to a route, while keeping the map available to show where each option takes them.</p>
+    </section>
+    <section id="key-features">
+      <h2>Key Features</h2>
+      <h3>Plan a trip</h3><p>Enter an origin and destination and set the vehicle efficiency and fuel price used for the estimate.</p>
+      <h3>Compare route options</h3><p>Compare duration, distance, and estimated fuel cost alongside the map. The elevation profile adds context about the terrain along the selected route.</p>
+      <h3>Return to a saved trip</h3><p>Saved Trips gives repeat journeys a place to live. Favorites help drivers find the trips they come back to most often.</p>
+    </section>
+    <section id="prototype">
+      <h2>Try Route</h2><p>The standalone prototype lets you plan a trip and compare route options. Fuel costs are estimates based on the assumptions you enter.</p>
+      <a class="feature-link" href="https://route-trip-planner-hd2535-buedus-projects.vercel.app/route-options">Open Route ↗</a>
+    </section>
+  </article>
+</main></body></html>
