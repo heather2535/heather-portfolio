@@ -9,6 +9,10 @@ module.exports=async(req,res)=>{
  let body;try{body=typeof req.body==='string'?JSON.parse(req.body):req.body;}catch{return res.status(400).json({error:'Invalid message'});}
  const messages=body?.messages;
  if(!Array.isArray(messages)||!messages.length||messages.length>10||messages.some((m,i)=>!m||m.role!==(i%2===0?'user':'assistant')||typeof m.content!=='string'||!m.content.trim()||m.content.length>2000)||messages.at(-1).role!=='user')return res.status(400).json({error:'Please send a shorter question or start a new chat.'});
+ const latestQuestion=messages.at(-1).content.trim();
+ if(/^(?:what(?:'|’)?s|what is|which is|tell me (?:about )?)\s+(?:your|my)\s+favou?rite\s+project\s*\??[.!]?$/i.test(latestQuestion)){
+  return res.status(200).json({answer:"ROUTE. I will take it from idea to App Store, and it is projected to serve 1,500+ roadtrippers with 1,000+ miles driven. It’s the cleanest proof that I can design and ship alone."});
+ }
  try{
   const url=process.env.KV_REST_API_URL||process.env.UPSTASH_REDIS_REST_URL,token=process.env.KV_REST_API_TOKEN||process.env.UPSTASH_REDIS_REST_TOKEN;
   if(!url||!token)throw Error('limits unavailable');
