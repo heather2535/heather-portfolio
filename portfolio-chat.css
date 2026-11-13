@@ -2,3 +2,6 @@
 
 /* Home page: Ask AI replaces the header résumé button. Other pages keep the floating launcher. */
 .home-header .hc-trigger-header{position:static;inset:auto;z-index:auto;flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:9px 17px;border:1px solid #111;border-radius:30px;box-shadow:none;font:500 14px/1.3 Inter,Arial,sans-serif;background:#fff;color:#111;white-space:nowrap}.home-header .hc-trigger-header svg{width:18px;height:18px}.home-header .hc-trigger-header:hover{background:#f5f5f5}@media(max-width:760px){body.upgraded .home-header>.hc-trigger-header{display:inline-flex!important;margin-left:auto;padding:8px 12px;font-size:12px;gap:6px}.home-header .hc-trigger-header svg{width:16px;height:16px}}@media(max-width:390px){.home-header .hc-trigger-header span{display:none}}
+
+/* Non-modal assistant: keep the portfolio visible and usable behind the side panel. */
+#heather-chat{z-index:1100}#heather-chat::backdrop{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
