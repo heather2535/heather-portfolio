@@ -5,3 +5,13 @@
 
 /* Non-modal assistant: keep the portfolio visible and usable behind the side panel. */
 #heather-chat{z-index:1100}#heather-chat::backdrop{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+
+/* Reserve a real layout column for the chat on desktop instead of covering content. */
+@media(min-width:901px){
+ html.hc-panel-open{--hc-panel-width:min(540px, 36vw)}
+ html.hc-panel-open body{width:calc(100% - var(--hc-panel-width))!important;max-width:calc(100% - var(--hc-panel-width))!important;min-width:0!important;margin-left:0!important;margin-right:0!important}
+ html.hc-panel-open body .home-header,html.hc-panel-open body .site-header{max-width:100%!important}
+ html.hc-panel-open body.upgraded .home-header{right:var(--hc-panel-width)!important;width:calc(100% - var(--hc-panel-width))!important}
+ html.hc-panel-open #heather-chat{width:var(--hc-panel-width)!important}
+}
+@media(max-width:900px){#heather-chat{width:min(540px,100%)}}
