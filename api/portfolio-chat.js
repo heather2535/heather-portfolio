@@ -13,6 +13,9 @@ module.exports=async(req,res)=>{
  if(/^(?:what(?:'|’)?s|what is|which is|tell me (?:about )?)\s+(?:your|my)\s+favou?rite\s+project\s*\??[.!]?$/i.test(latestQuestion)){
   return res.status(200).json({answer:"ROUTE. I will take it from idea to App Store, and it is projected to serve 1,500+ roadtrippers with 1,000+ miles driven. It’s the cleanest proof that I can design and ship alone."});
  }
+ if(/^(?:(?:can|could)\s+you\s+)?tell\s+me\s+about\s+yourself\s*[?.!]?$/i.test(latestQuestion)){
+  return res.status(200).json({answer:"I’m a product designer, recently graduated from Boston University and based in the SF Bay Area. I aim to lead complex software from 0 to 1 and ship it. I build my own products like ROUTE and Growth. Since graduating, I explored nursing school until early September 2026, and now I’m taking a much-needed break while exploring new opportunities."});
+ }
  try{
   const url=process.env.KV_REST_API_URL||process.env.UPSTASH_REDIS_REST_URL,token=process.env.KV_REST_API_TOKEN||process.env.UPSTASH_REDIS_REST_TOKEN;
   if(!url||!token)throw Error('limits unavailable');
