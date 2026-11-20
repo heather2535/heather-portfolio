@@ -375,6 +375,10 @@ html body.upgraded .personal-note.my-story {
 }
 .my-story #my-story-title { scroll-snap-align: start; margin: 0; font-size: clamp(25px, 2.2vw, 36px); font-weight: 650; letter-spacing: -.045em; }
 #my-story { scroll-snap-align: none; }
+@media (min-width: 761px) {
+  #my-story-title { scroll-margin-top: 88px; }
+  html body.upgraded > footer { scroll-snap-align: none; }
+}
 .my-story-copy p { margin: 0 0 1em; }
 .my-story-portrait {
   display: block;
