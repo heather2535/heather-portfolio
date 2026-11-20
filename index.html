@@ -490,6 +490,7 @@ html body.upgraded footer.portfolio-contact-footer {
   margin-top: 20px;
   font-size: 15px;
 }
+.portfolio-contact-footer nav a { display: inline-flex; align-items: center; gap: .6em; }
 #footer-copy-status { position: absolute; top: 100%; margin-top: 5px; color: #d9f951; }
 @media (max-width: 760px) {
   .portfolio-footer-inner { width: 88%; grid-template-columns: minmax(0, 1fr); }
@@ -577,8 +578,8 @@ html body.upgraded footer.portfolio-contact-footer {
         <button type="button" id="footer-copy-email" aria-label="Copy email address">Copy</button>
       </div>
       <nav aria-label="Footer">
-        <a href="heather-davies-resume.pdf">Résumé <span aria-hidden="true">↗</span></a>
-        <a href="https://www.linkedin.com/in/heatherrdavies/">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="heather-davies-resume.pdf">Résumé <span class="selected-work-arrow" aria-hidden="true"></span></a>
+        <a href="https://www.linkedin.com/in/heatherrdavies/">LinkedIn <span class="selected-work-arrow" aria-hidden="true"></span></a>
       </nav>
       <span id="footer-copy-status" role="status"></span>
     </div>
