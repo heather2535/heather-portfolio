@@ -209,11 +209,14 @@ html body.upgraded #route-project.route-feature .feature-link:hover { background
 }
 #route-project .route-feature-phones img {
   display: block;
-  width: min(46%, 235px);
+  width: min(47%, 255px);
   height: auto;
+  aspect-ratio: 1 / 1.89;
+  object-fit: cover;
+  object-position: center top;
   box-sizing: border-box;
   border: 2px solid #adc4b5;
-  border-radius: clamp(16px, 3vw, 40px);
+  border-radius: clamp(16px, 3vw, 40px) clamp(16px, 3vw, 40px) 0 0;
 }
 @media (max-width: 760px) {
   html body.upgraded #product-ideas #route-project.route-feature { grid-template-columns: minmax(0, 1fr) !important; gap: 0; }
