@@ -18,3 +18,14 @@ html body.upgraded #product-ideas #selected-work.draft-feature .feature-link {
 html body.upgraded #product-ideas #selected-work.draft-feature .feature-link:hover {
   background: #e5d3ff;
 }
+
+html body.upgraded #product-ideas #selected-work.draft-feature .draft-feature-art {
+  /* Keep the aspect-ratio frame sized by its grid column at every width. */
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  align-self: start;
+  margin: 0;
+}
