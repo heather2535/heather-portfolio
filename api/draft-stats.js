@@ -17,5 +17,5 @@ module.exports = async function handler(req, res) {
     const response=await fetch(url,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(['EVAL',script,'3','portfolio:draft:views','portfolio:draft:like-clicks',`portfolio:draft:session:${id}:${body.session||'read'}`,action,id]),signal:AbortSignal.timeout(5000)});
     const data=await response.json();if(!response.ok||data.error||!Array.isArray(data.result)) throw new Error('Counter request failed');
     const [views,likes,liked]=data.result;return res.status(200).json({views,likes,liked:Boolean(liked)});
-  } catch(error) {console.error('Draft counters unavailable');return res.status(503).json({error:'Counters temporarily unavailable'});}
+  } catch(error) {console.error('Taffy counters unavailable');return res.status(503).json({error:'Counters temporarily unavailable'});}
 };
