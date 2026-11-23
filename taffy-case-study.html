@@ -207,4 +207,15 @@ html body.upgraded main#main #key-features .feature-item{margin:28px 0 0!importa
 html body.upgraded main#main #key-features .feature-item button{font:500 18px/1.4 Inter,Arial,sans-serif!important;letter-spacing:0!important;text-transform:none!important;color:#777!important}
 html body.upgraded main#main #key-features .feature-item button[aria-selected="true"]{color:#000!important}
 html body.upgraded main#main #key-features .feature-item p{font:400 16px/1.8 Inter,Arial,sans-serif!important;margin:10px 0 0!important;color:#000!important}
+</style><style id="taffy-show-all-feature-options-fix">
+@media(min-width:801px){
+html body.upgraded main#main #key-features .feature-copy [role="tablist"] .feature-item:nth-child(2){display:block!important;visibility:visible!important;opacity:1!important}
+html body.upgraded main#main #key-features:has(#feature-tab-0[aria-selected="true"]) .feature-copy .feature-item:not(:first-child),
+html body.upgraded main#main #key-features:has(#feature-tab-1[aria-selected="true"]) .feature-copy .feature-item:not(:nth-child(2)){display:block!important}
+html body.upgraded main#main #key-features:has(#feature-tab-1[aria-selected="true"]){grid-template-columns:minmax(0,1fr) minmax(0,1.48fr)!important;align-items:start!important;column-gap:48px!important}
+html body.upgraded main#main #key-features:has(#feature-tab-1[aria-selected="true"]) .feature-copy{grid-column:1!important;grid-row:1!important;align-self:start!important}
+html body.upgraded main#main #key-features:has(#feature-tab-1[aria-selected="true"]) #feature-panel{grid-column:2!important;grid-row:1!important;position:sticky!important;top:110px!important;min-height:540px!important;padding:26px!important;background:#f7eff6!important;display:flex!important}
+html body.upgraded main#main #key-features:has(#feature-tab-1[aria-selected="true"]) #feature-tab-1{font:500 18px/1.4 Inter,Arial,sans-serif!important;letter-spacing:0!important;max-width:none!important}
+html body.upgraded main#main #key-features:has(#feature-tab-1[aria-selected="true"]) .feature-item:nth-child(2) p{font:400 16px/1.8 Inter,Arial,sans-serif!important;max-width:370px!important}
+}
 </style></body></html>
