@@ -14,3 +14,10 @@ html body header#portfolio-navigation a:focus-visible,html body header#portfolio
 
 /* Draw the reference arrow independently of font glyph coverage. */
 html body header#portfolio-navigation>.contact-toggle::after,html body header#portfolio-navigation>.owting-contact::after,html body header#portfolio-navigation>.portfolio-contact-link::after{content:"";display:inline-block;width:18px;height:18px;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23111' stroke-width='1.8' stroke-linecap='square'%3E%3Cpath d='M4 16 16 4M5 4h11v11'/%3E%3C/svg%3E")}
+
+html body.project-page header#portfolio-navigation.home-header {
+  background: #fff !important;
+}
+html body.project-page header#portfolio-navigation.home-header::after {
+  content: none;
+}
