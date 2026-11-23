@@ -29,3 +29,53 @@ html body.upgraded #product-ideas #selected-work.draft-feature .draft-feature-ar
   align-self: start;
   margin: 0;
 }
+
+
+/* Taffy homepage: layered lavender shapes behind the browser window (2026-11-22). */
+html body.upgraded #selected-work.draft-feature {
+  position:relative!important;
+  isolation:isolate;
+  overflow:hidden;
+  background:linear-gradient(125deg,#f4eaff 0%,#e2d8fb 57%,#e6d8fa 100%)!important;
+  box-shadow:0 0 0 100vmax #e2d8fb!important;
+}
+html body.upgraded #selected-work.draft-feature::before {
+  content:"";
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  width:45%;
+  height:76%;
+  right:5%;
+  top:12%;
+  border-radius:32px;
+  transform:rotate(-9deg);
+  background:linear-gradient(145deg,#cba5fa,#a96bef);
+  opacity:.78;
+}
+html body.upgraded #selected-work.draft-feature::after {
+  content:"";
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  width:75%;
+  height:75%;
+  right:-22%;
+  bottom:-57%;
+  border-radius:50% 50% 0 0;
+  transform:rotate(-13deg);
+  background:linear-gradient(145deg,rgba(182,133,245,.3),rgba(168,112,235,.12));
+}
+html body.upgraded #selected-work.draft-feature > .draft-feature-art,
+html body.upgraded #selected-work.draft-feature > .draft-feature-copy {
+  position:relative;
+  z-index:1;
+}
+@media(max-width:760px){
+  html body.upgraded #selected-work.draft-feature::before{
+    width:78%;height:38%;right:-13%;top:53%;transform:rotate(-9deg);
+  }
+  html body.upgraded #selected-work.draft-feature::after{
+    width:120%;height:35%;right:-35%;bottom:-22%;
+  }
+}
