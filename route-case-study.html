@@ -142,7 +142,9 @@ html body.upgraded main#main.route-case #overview .route-case-title{white-space:
 .route-redesign-showcase { margin: 32px 0 48px; }
 .route-redesign-showcase h3 { margin: 0 0 24px; }
 .route-redesign-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 3vw, 36px); max-width: 720px; margin-inline: auto; }
-.route-redesign-pair + .route-redesign-pair { margin-top: 32px; }
+@media (min-width: 721px) {
+  .route-redesign-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 2vw, 24px); max-width: none; }
+}
 .route-redesign-pair figure { display: grid; grid-template-rows: auto 1fr; gap: 12px; margin: 0; }
 .route-redesign-pair img { display: block; width: 100%; max-width: 280px; aspect-ratio: 941 / 2048; height: auto; object-fit: contain; margin-inline: auto; border-radius: clamp(8px, 1.4vw, 18px); }
 .route-redesign-pair figcaption { width: 100%; max-width: 280px; margin: 0 auto; }
@@ -168,7 +170,7 @@ html body.upgraded main#main.route-case #overview .route-case-title{white-space:
 <section id="impact" class="route-design-decisions"><h2>Design decisions</h2><div class="route-decision-story"><h3>From mileage totals to a view of the journey</h3><p>Early iterations emphasized how much I drove. Reviewing the experience revealed a gap: the totals offered little context about individual journeys or the places they connected.</p><p>I redesigned the dashboard around driving insights, introduced a Coverage Map, and expanded trip summaries to show the route, duration, distance, and estimated fuel cost. Each view answers a different question: what happened on this trip, how my driving adds up, and where I have traveled.</p></div><div class="route-decision-story"><h3>Putting navigation first</h3><p>I replaced the overview dashboard with a map-first Home screen. Destination search became the main action, so drivers could find a place and start turn-by-turn navigation as soon as they opened the app.</p><p>I brought back fuel cost estimates based on the vehicle’s MPG and showed them where drivers needed them. A live estimate stays visible while they follow a route, and a small badge on each completed trip makes the estimate easy to scan in the drive log. That kept the Home map focused on finding and starting a route.</p></div>
 <section class="route-redesign-showcase" aria-labelledby="route-redesign-title">
   <h3 id="route-redesign-title">From dashboard to map-first navigation</h3>
-  <div class="route-redesign-pair" role="group" aria-label="Home before and after">
+  <div class="route-redesign-pair route-redesign-gallery" role="group" aria-label="Original Home, map-first Home, completed trips, and active navigation">
     <figure>
       <img src="/images/route-original-home-dashboard.jpg" width="689" height="1500" alt="Original dark green dashboard with a fuel total, Plan a route button, and recent drives." loading="lazy" decoding="async">
       <figcaption><strong>Original Home dashboard</strong><span>The original dashboard foregrounded fuel spend, vehicle details, and recent drives.</span></figcaption>
@@ -177,8 +179,6 @@ html body.upgraded main#main.route-case #overview .route-case-title{white-space:
       <img src="/images/route-map-first-home.jpg" width="689" height="1500" alt="Home map with a Where to? search field and shortcuts for gas, shopping, and groceries." loading="lazy" decoding="async">
       <figcaption><strong>Map-first Home</strong><span>Destination search is the first action on Home.</span></figcaption>
     </figure>
-  </div>
-  <div class="route-redesign-pair" role="group" aria-label="Completed trips and active navigation">
     <figure>
       <img src="/images/route-live-fuel-estimate.jpg" width="689" height="1500" alt="Trips list with fuel cost estimates including $0.08 for Los Altos to Los Altos Hills." loading="lazy" decoding="async">
       <figcaption><strong>Completed trips</strong><span>Drivers can scan estimated costs alongside their saved routes.</span></figcaption>
