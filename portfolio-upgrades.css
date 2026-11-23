@@ -130,3 +130,10 @@ html body.upgraded #selected-work.draft-feature::after {
     bottom:-25%!important;
   }
 }
+
+/* Remove the lower curved purple decorative shape completely on all screens. */
+html body.upgraded #selected-work.draft-feature::after {
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
