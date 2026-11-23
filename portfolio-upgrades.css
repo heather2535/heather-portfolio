@@ -113,3 +113,20 @@ html body.upgraded #selected-work.draft-feature::after {
    bottom:-27%!important;
  }
 }
+
+/* Keep the lower curved decoration on the right only; no bottom-left shape. */
+html body.upgraded #selected-work.draft-feature::after {
+  width:70%!important;
+  height:72%!important;
+  right:-19%!important;
+  bottom:-58%!important;
+  transform:rotate(-10deg)!important;
+}
+@media(max-width:760px){
+  html body.upgraded #selected-work.draft-feature::after {
+    width:90%!important;
+    height:35%!important;
+    right:-25%!important;
+    bottom:-25%!important;
+  }
+}
