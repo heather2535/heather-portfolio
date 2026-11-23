@@ -5,3 +5,10 @@ html body.upgraded main#main.route-case #key-experiences.route-experiences{displ
 
 /* Match the grey media panel's top edge to the Key Experiences heading. */
 @media(min-width:801px){html body.upgraded main#main.route-case #key-experiences.route-experiences>.route-experience-media{position:relative!important;top:auto!important;margin-top:0!important;align-self:start!important}}
+
+/* Vertical carousel progress indicators, outside the right edge of the media card. */
+#key-experiences .route-experience-dots{position:absolute;right:-39px;top:18px;display:flex;flex-direction:column;align-items:center;gap:12px;z-index:5}
+#key-experiences .route-experience-dot{display:block;width:12px;height:12px;border:0;border-radius:999px;background:#dedede;padding:0;cursor:pointer;transition:height .18s ease,background .18s ease}
+#key-experiences .route-experience-dot.is-active{height:38px;background:#999}
+#key-experiences .route-experience-dot:focus-visible{outline:2px solid #17263e;outline-offset:4px}
+@media(max-width:800px){#key-experiences .route-experience-dots{right:12px;top:70px;gap:9px}#key-experiences .route-experience-dot{width:9px;height:9px}#key-experiences .route-experience-dot.is-active{height:25px}}
