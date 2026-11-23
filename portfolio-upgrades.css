@@ -94,3 +94,22 @@ html body.upgraded #selected-work.draft-feature > .draft-feature-copy {
    width:83%!important;height:38%!important;
  }
 }
+
+
+/* Extend Taffy's lower curved accent all the way to the right viewport edge. */
+html body.upgraded #selected-work.draft-feature::after {
+  width:115%!important;
+  height:85%!important;
+  right:-44%!important;
+  bottom:-64%!important;
+  border-radius:50% 50% 0 0!important;
+  transform:rotate(-10deg)!important;
+}
+@media(max-width:760px){
+ html body.upgraded #selected-work.draft-feature::after {
+   width:165%!important;
+   height:43%!important;
+   right:-64%!important;
+   bottom:-27%!important;
+ }
+}
