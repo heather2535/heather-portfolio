@@ -271,4 +271,24 @@ html body.upgraded main#main #key-features #feature-panel #feature-image{
  html body.upgraded main#main section#key-features.feature-showcase{grid-template-columns:1fr!important;gap:24px!important}
  html body.upgraded main#main #key-features .feature-copy,html body.upgraded main#main #key-features #feature-panel{grid-column:1!important;grid-row:auto!important}
 }
+</style><style id="taffy-locked-pink-panel-dimensions-20261122">
+/* Keep the outer pink panel identical to the first (ATS) feature for every tab. */
+@media(min-width:801px){
+html body.upgraded main#main #key-features.feature-showcase,
+html body.upgraded main#main #key-features.feature-showcase:has(#feature-tab-0[aria-selected="true"]),
+html body.upgraded main#main #key-features.feature-showcase:has(#feature-tab-1[aria-selected="true"]),
+html body.upgraded main#main #key-features.feature-showcase:has(#feature-tab-2[aria-selected="true"]){
+grid-template-columns:minmax(0,1fr) minmax(0,1.48fr)!important;column-gap:48px!important;
+}
+html body.upgraded main#main #key-features #feature-panel.feature-media,
+html body.upgraded main#main #key-features:has(#feature-tab-0[aria-selected="true"]) #feature-panel.feature-media,
+html body.upgraded main#main #key-features:has(#feature-tab-1[aria-selected="true"]) #feature-panel.feature-media,
+html body.upgraded main#main #key-features:has(#feature-tab-2[aria-selected="true"]) #feature-panel.feature-media{
+box-sizing:border-box!important;grid-column:2!important;grid-row:1!important;
+width:100%!important;min-width:0!important;min-height:0!important;
+height:auto!important;aspect-ratio:1.26/1!important;
+padding:26px!important;background:#f7edf5!important;border-radius:18px!important;
+display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;
+}
+}
 </style></body></html>
