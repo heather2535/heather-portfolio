@@ -4,5 +4,9 @@
   "private": true,
   "dependencies": {
     "@vercel/functions": "3.11.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3"
   }
 }
