@@ -79,3 +79,18 @@ html body.upgraded #selected-work.draft-feature > .draft-feature-copy {
     width:120%;height:35%;right:-35%;bottom:-22%;
   }
 }
+
+/* Keep the angled accent behind the Taffy dashboard, never behind the copy. */
+@media(min-width:761px){
+ html body.upgraded #selected-work.draft-feature::before{
+   left:2%!important;right:auto!important;top:12%!important;
+   width:45%!important;height:76%!important;
+   transform:rotate(-9deg)!important;
+ }
+}
+@media(max-width:760px){
+ html body.upgraded #selected-work.draft-feature::before{
+   left:-9%!important;right:auto!important;top:53%!important;
+   width:83%!important;height:38%!important;
+ }
+}
