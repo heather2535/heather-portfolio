@@ -2,3 +2,6 @@ html body.upgraded main#main.route-case #key-experiences.route-experiences{displ
 
 /* Align the left experience copy with the top edge of the media card. */
 @media(min-width:801px){html body.upgraded main#main.route-case #key-experiences .route-experience-copy{padding-top:0;align-self:start}html body.upgraded main#main.route-case #key-experiences .route-experience-media{margin-top:0;align-self:start}}
+
+/* Match the grey media panel's top edge to the Key Experiences heading. */
+@media(min-width:801px){html body.upgraded main#main.route-case #key-experiences.route-experiences>.route-experience-media{position:relative!important;top:auto!important;margin-top:0!important;align-self:start!important}}
