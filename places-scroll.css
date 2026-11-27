@@ -8,3 +8,19 @@
 .places-scroll::-webkit-scrollbar{display:none;width:0;height:0}
 .places-scroll::-webkit-scrollbar-thumb{background:var(--orange);border-radius:8px}
 @media(max-width:600px){.photo-row.places-scroll{grid-auto-columns:78vw;gap:14px}}
+
+/* Constrain each gallery card independently of image intrinsic dimensions. */
+#places.play-gallery .places-scroll { align-items: start; }
+#places.play-gallery .places-scroll > figure {
+  aspect-ratio: 4 / 5;
+  height: auto;
+  overflow: hidden;
+  border-radius: 22px;
+}
+#places.play-gallery .places-scroll > figure > img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+}
